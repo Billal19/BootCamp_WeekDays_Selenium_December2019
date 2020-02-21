@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Extent Report Directory/Users/billalyahiaoui/IdeaProjects/CLONED TEAM PROJECT/BootCamp_WeekDays_Selenium_December2019/JqueryUI/target/surefire-reports/html]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2020-02-20T22:55:34 EST" name="Jquery Automation Script" finished-at="2020-02-20T22:55:45 EST" duration-ms="10636">
+    <groups>
+    </groups>
+    <test started-at="2020-02-20T22:55:34 EST" name="Jquery Home" finished-at="2020-02-20T22:55:45 EST" duration-ms="10636">
+      <class name="TestHomePage.TestHomePage">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:TestHomePage.TestHomePage@67e2d983]" started-at="2020-02-20T22:55:34 EST" name="extentSetup" finished-at="2020-02-20T22:55:34 EST" duration-ms="389" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@18ca3c62]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Extent Report Directory/Users/billalyahiaoui/IdeaProjects/CLONED TEAM PROJECT/BootCamp_WeekDays_Selenium_December2019/JqueryUI/target/surefire-reports/html]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- extentSetup -->
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestHomePage.TestHomePage@67e2d983]" started-at="2020-02-20T22:55:34 EST" name="setUp" finished-at="2020-02-20T22:55:37 EST" duration-ms="2464" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[79]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://jqueryui.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:TestHomePage.TestHomePage@67e2d983]" started-at="2020-02-20T22:55:37 EST" name="startExtent" finished-at="2020-02-20T22:55:37 EST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestHomePage.TestHomePage.FrameCheckRadioBox() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="FrameCheckRadioBox()[pri:2, instance:TestHomePage.TestHomePage@67e2d983]" started-at="2020-02-20T22:55:37 EST" name="FrameCheckRadioBox" finished-at="2020-02-20T22:55:45 EST" duration-ms="7896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FrameCheckRadioBox -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:TestHomePage.TestHomePage@67e2d983]" started-at="2020-02-20T22:55:45 EST" name="afterEachTestMethod" finished-at="2020-02-20T22:55:45 EST" duration-ms="258" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FrameCheckRadioBox status=SUCCESS method=TestHomePage.FrameCheckRadioBox()[pri:2, instance:TestHomePage.TestHomePage@67e2d983] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:TestHomePage.TestHomePage@67e2d983]" started-at="2020-02-20T22:55:45 EST" name="cleanUp" finished-at="2020-02-20T22:55:45 EST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:TestHomePage.TestHomePage@67e2d983]" started-at="2020-02-20T22:55:45 EST" name="generateReport" finished-at="2020-02-20T22:55:45 EST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- TestHomePage.TestHomePage -->
+    </test> <!-- Jquery Home -->
+  </suite> <!-- Jquery Automation Script -->
+</testng-results>

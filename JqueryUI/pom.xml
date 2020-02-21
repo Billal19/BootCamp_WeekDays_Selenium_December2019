@@ -37,7 +37,7 @@
                 <configuration>
                     <suiteXmlFiles>
 
-                        <suiteXmlFiles>target/test-classes/JqueryTestRunner.xml</suiteXmlFiles>
+                        <suiteXmlFiles>target/test-classes/JqueryUITestRunner.xml</suiteXmlFiles>
 
                     </suiteXmlFiles>
                 </configuration>

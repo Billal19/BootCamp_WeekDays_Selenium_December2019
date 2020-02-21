@@ -458,7 +458,7 @@ public class WebAPI {
     }
 
     //iFrame Handle
-    public void iframeHandle(String element) {
+    public void iframeHandle(WebElement element) {
         driver.switchTo().frame(element);
     }
 
@@ -620,6 +620,19 @@ public class WebAPI {
         }
 
         object.accept();
+    }
+
+    public void radioButton(String radioButton){
+        WebElement radio = driver.findElement(By.xpath(radioButton));
+        radio.click();
+    }
+
+    public void CheckBox(String path ){
+        WebElement CheckBoxSelect = driver.findElement(By.xpath(path));
+        for(int i=0; i<2; i++){
+            CheckBoxSelect.click();
+            System.out.println(CheckBoxSelect.isDisplayed());
+        }
     }
 
 

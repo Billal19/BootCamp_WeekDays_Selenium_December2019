@@ -1,0 +1,10 @@
+# Created at 2020-02-20T22:22:06.240
+org.apache.maven.surefire.testset.TestSetFailedException: Suite file /Users/billalyahiaoui/IdeaProjects/CLONED TEAM PROJECT/BootCamp_WeekDays_Selenium_December2019/JqueryUI/target/test-classes/JqueryTestRunner.xml is not a valid file
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.locateTestSets(TestNGXmlTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+
