@@ -633,7 +633,41 @@ public class WebAPI {
             CheckBoxSelect.click();
             System.out.println(CheckBoxSelect.isDisplayed());
         }
+
+
+
     }
+
+
+
+
+
+    public void DragAndDrop(String path) {
+
+        WebDriver driver;
+
+//        System.setProperty("webdriver.chrome.driver"," BrowserDriver/mac/chromedriver ");
+          driver= new ChromeDriver();
+//        driver.get("https://jqueryui.com/");
+
+            //Element which needs to drag.
+            WebElement From=driver.findElement(By.xpath(path));
+
+            //Element on which need to drop.
+            WebElement To=driver.findElement(By.xpath(path));
+
+            driver.switchTo().frame(0);
+
+            //Using Action class for drag and drop.
+            Actions act=new Actions(driver);
+
+            //Dragged and dropped.
+            act.dragAndDrop(From, To).build().perform();
+
+
+
+    }
+
 
 
 
