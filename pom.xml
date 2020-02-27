@@ -11,6 +11,7 @@
     <modules>
         <module>Generic</module>
         <module>JqueryUI</module>
+        <module>LetsKodeIt</module>
     </modules>
 
     <properties>
@@ -21,6 +22,8 @@
 
 
     <dependencyManagement>
+
+
         <dependencies>
 
             <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -36,7 +39,6 @@
                 <artifactId>selenium-server</artifactId>
                 <version>3.141.59</version>
             </dependency>
-
             <!-- https://mvnrepository.com/artifact/org.testng/testng -->
             <dependency>
                 <groupId>org.testng</groupId>
@@ -49,7 +51,6 @@
                 <artifactId>mongo-java-driver</artifactId>
                 <version>3.6.0-beta1</version>
             </dependency>
-
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -91,20 +92,17 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>3.0</version>
             </dependency>
-
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>2.5</version>
             </dependency>
-
             <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
             <dependency>
                 <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-java</artifactId>
-                <version>5.1.3</version>
+                <version>5.0.0</version>
             </dependency>
-
             <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
             <dependency>
                 <groupId>io.cucumber</groupId>
@@ -112,17 +110,26 @@
                 <version>4.3.1</version>
                 <scope>test</scope>
             </dependency>
-
             <!-- https://mvnrepository.com/artifact/junit/junit -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
-                <scope>test</scope>
+                <!--<scope>test</scope>-->
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-testng</artifactId>
+                <version>5.1.3</version>
             </dependency>
 
+
+
         </dependencies>
+
     </dependencyManagement>
+
 
     <build>
         <plugins>
@@ -140,14 +147,9 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <!--<suiteXmlFiles>target/test-classes/ATNTTestRunner.xml</suiteXmlFiles>  -->
-                        <!--<suiteXmlFiles>target/test-classes/BestBuyTestRunner.xml</suiteXmlFiles>  -->
-                        <!--<suiteXmlFiles>target/test-classes/BlueCrossBlueShieldTestRunner.xml</suiteXmlFiles>  -->
-                        <!--<suiteXmlFiles>target/test-classes/MarriotTestRunner.xml</suiteXmlFiles>  -->
-                        <!--<suiteXmlFiles>target/test-classes/NBCTestRunner.xml</suiteXmlFiles>  -->
-                        <!--<suiteXmlFiles>target/test-classes/NewYorkLifeTestRunner.xml</suiteXmlFiles>  -->
-                        <!--<suiteXmlFiles>target/test-classes/TDBankTestRunner.xml</suiteXmlFiles>  -->
-                        <!--<suiteXmlFiles>target/test-classes/UnitedTestRunner.xml</suiteXmlFiles>  -->
+
+                        <!--<suiteXmlFiles>target/test-classes/MarriottTestRunner.xml</suiteXmlFiles>  -->
+
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

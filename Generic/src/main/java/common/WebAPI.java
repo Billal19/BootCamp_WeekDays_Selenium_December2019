@@ -364,7 +364,7 @@ public class WebAPI {
         return list;
     }
 
-    public List<WebElement> getListOfWebElementsByXpath(String locator) {
+    public static List<WebElement> getListOfWebElementsByXpath(String locator) {
         List<WebElement> list = new ArrayList<WebElement>();
         list = driver.findElements(By.xpath(locator));
         return list;
@@ -430,7 +430,7 @@ public class WebAPI {
 
     }
 
-    public void mouseHoverByXpath(String locator) {
+    public static void mouseHoverByXpath(String locator) {
         try {
             Actions action = new Actions(driver);
             WebElement element = driver.findElement(By.xpath(locator));
@@ -447,12 +447,12 @@ public class WebAPI {
     }
 
     //handling Alert
-    public void okAlert() {
+    public static void okAlert() {
         Alert alert = driver.switchTo().alert();
         alert.accept();
     }
 
-    public void cancelAlert() {
+    public static void cancelAlert() {
         Alert alert = driver.switchTo().alert();
         alert.dismiss();
     }
@@ -627,14 +627,60 @@ public class WebAPI {
         radio.click();
     }
 
-    public void CheckBox(String path ){
+    public void CheckBox(String path ) {
         WebElement CheckBoxSelect = driver.findElement(By.xpath(path));
-        for(int i=0; i<2; i++){
+        for (int i = 0; i < 2; i++) {
             CheckBoxSelect.click();
             System.out.println(CheckBoxSelect.isDisplayed());
         }
 
 
+    }
+        //Select From single Menu
+        public static void selectFromDrop(String locator1, String locator2){
+            WebElement element = driver.findElement(By.xpath(locator1));
+            Select drpWrd = new Select(element);
+            drpWrd.selectByValue(locator2);
+        }
+        public static void resizeElement(String path, String Snippet) {
+
+            WebDriverWait wait = new WebDriverWait(driver, 5);
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath(path)));
+            WebElement resizeableElement = driver.findElement(By.xpath(Snippet));
+            resize(resizeableElement, 100, 100);
+        }
+
+        public static void resize(WebElement elementToResize, int xOffset, int yOffset) {
+            try {
+                if (elementToResize.isDisplayed()) {
+                    Actions action = new Actions(driver);
+                    action.clickAndHold(elementToResize).moveByOffset(xOffset, yOffset).release().build().perform();
+                } else {
+                    System.out.println("Element was not displayed to drag");
+                }
+            } catch (StaleElementReferenceException e) {
+                System.out.println("Element with " + elementToResize + "is not attached to the page document "   + e.getStackTrace());
+            } catch (NoSuchElementException e) {
+                System.out.println("Element " + elementToResize + " was not found in DOM " + e.getStackTrace());
+            } catch (Exception e) {
+                System.out.println("Unable to resize" + elementToResize + " - "  + e.getStackTrace());
+            }
+        }
+        public static void rightClickMouse(String locator){
+            Actions actions = new Actions(driver);
+            WebElement elementLocator = driver.findElement(By.xpath(locator));
+            actions.contextClick(elementLocator).perform();
+        }
+        //Select From Multiple Menu
+        public static void selectFromMultipleDrop(String locator1, String locator2,String locator3){
+            WebElement element = driver.findElement(By.xpath(locator1));
+            Select drpWrd = new Select(element);
+            drpWrd.selectByValue(locator2);
+            drpWrd.selectByValue(locator3);
+        }
+
+
+
 
     }
 
@@ -642,31 +688,6 @@ public class WebAPI {
 
 
 
-    public void DragAndDrop(String path) {
-
-        WebDriver driver;
-
-//        System.setProperty("webdriver.chrome.driver"," BrowserDriver/mac/chromedriver ");
-          driver= new ChromeDriver();
-//        driver.get("https://jqueryui.com/");
-
-            //Element which needs to drag.
-            WebElement From=driver.findElement(By.xpath(path));
-
-            //Element on which need to drop.
-            WebElement To=driver.findElement(By.xpath(path));
-
-            driver.switchTo().frame(0);
-
-            //Using Action class for drag and drop.
-            Actions act=new Actions(driver);
-
-            //Dragged and dropped.
-            act.dragAndDrop(From, To).build().perform();
-
-
-
-    }
 
 
 
@@ -676,7 +697,3 @@ public class WebAPI {
 
 
 
-
-
-
-}
